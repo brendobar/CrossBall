@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/normalize.css">
+    <link rel="stylesheet" href="./dist/main.css">
+    <title>CrossBall</title>
+</head>
+<nav class="HEADER">
+
+    <div class="Logo">
+        <a href="#"></a>
+    </div>
+    
+    <button class="Ball"></button>
+
+    <div class="User">
+        <img src="./src/static/player/profile.png" alt="">
+    </div>
+    
+
+    <a class="IconBug" href="#"></a>
+
+    <div class="Bug">
+        <button class="dropdown--btn" id="menu"></button>
+
+        <div class="dropdown--content" id="menu--items">
+            <a href="#">Расписание</a>
+            <a href="#">Игровые отчёты</a>
+            <a href="#">Статистика</a>
+            <a href="#">Еще</a>
+        </div>
+    </div>
+
+
+
+</nav>
+<body>
+
+    <div class="PLAYER">
+        
+        <div class="Info">
+            <div class="ava">
+                <div class="progress--bar progress--89">
+                    <img class="progress__image" src="./src/static/player/profile.png" alt="">
+                </div>
+            </div>
+            <div class="ratio">
+                <div class="ratio--first">89.40</div>
+                <sup class="ratio--second">999 <i class="fas fa-arrow-up"></i></sup>
+                <!-- <div class="ratio--second">999</div> -->
+            </div>
+            <p class="name">Елишакашвили <br> Михо</p>
+        </div>
+
+        <div class="Edit">
+            <button><i class="fas fa-pencil-alt"></i> <span>Редактировать</span></button>
+        </div>
+
+        <div class="Share">
+            <p>Поделиться</p>
+            <div class="social">
+                <a href="" class="fab fa-facebook-f"></a>
+                <a href="" class="fab fa-vk"></a>
+                <a href="" class="fas fa-link"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="MENU">
+        
+        <div class="Scroll">
+            <div class="dropdown scroll--btn">
+
+                <button class="dropdown--btn" id="stat">
+                    <i class="far fa-user"></i> 
+                    Статистика 
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="dropdown--content" id="stats">
+                    <a href="#">Футбол</a>
+                    <a href="#">Баскетбол</a>
+                    <a href="#">Волейбол</a>
+                </div>
+                
+                
+            </div>
+            <div class="scroll--btn"><button class="upcoming-games"><i class="far fa-calendar"></i> Ближайшие игры</button></div>
+            <div class="scroll--btn"><button clsaa="games-reports"><i class="far fa-clipboard"></i> Игровые отчеты</button></div>
+            <div class="scroll--btn"><button class="history"><i class="fas fa-history"></i> История заказов</button></div>
+
+    
+            <div class="scroll--btn exit"><button><i class="fas fa-sign-out-alt"></i> Выйти</button></div>
+    
+            
+    
+            
+        </div>
+        
+
+    </div>
+
+    <div class="STATS">
+
+        <div class="ToggleSeason">
+            <div class="toggle--options">
+                <button class="toggle--options--btn--active">Все сезоны</button>
+                <button class="toggle--options--btn">Сезон 2020/21</button>
+            </div>
+        </div>
+
+        <div class="PlayerStats">
+
+            <div>
+                <p class="stat--name">Игры</p>
+                <p class="stat--value">36</p>
+            </div>
+
+            <div>
+                <p class="stat--name">Гол</p>
+                <p class="stat--value">67</p>
+            </div>
+
+            <div>
+                <p class="stat--name">Пас</p>
+                <p class="stat--value">136</p>
+            </div>
+
+            <div>
+                <p class="stat--name">Гол + Пас</p>
+                <p class="stat--value">136</p>
+            </div>
+
+        </div>
+        
+        <div class="Achieve">
+            <p>Награды и достижения</p>
+            <div class="achieve--container">
+                <div class="achieve--multi">
+                    <section><img src="./src/static/stats/stats-icon.png" alt=""><span class="achieve--multi--count">5</span></section>
+                    <section><img src="./src/static/stats/stats-icon.png" alt=""><span class="achieve--multi--count">5</span></section>
+                    <section><img src="./src/static/stats/stats-icon.png" alt=""><span class="achieve--multi--count">99</span></section>
+                </div>
+    
+                <div class="achieve--disable">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                </div>
+    
+                <div class="achieve--one">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                    <img src="./src/static/stats/stats-icon.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="StatShare"></div>
+
+        <div class="pattern"><img src="./src/static/stats/Pattern.svg" alt=""></div>
+        
+
+    </div>
+
+    <div class="DROPDOWN">
+        <div class="dropdown">
+
+            <button class="dropdown--btn" id="format">
+                Формат 
+                <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div class="dropdown--content" id="formats">
+                <a href="#">Формат 1</a>
+                <a href="#">Формат 2</a>
+                <a href="#">Формат 3</a>
+            </div>
+            
+            
+        </div>
+        <div class="SeasonTable" id='showData'>
+
+        </div>
+
+
+
+        
+    </div>
+
+</body>
+
+<footer class="FOOTER">
+
+    <div class="Contact">
+        <p class="desk--contact">Наши контакты</p>
+        <p>go@crossball.ru</p>
+        <p>+7 (495) 109-03-09</p>
+    </div>
+
+    <div class="Social">
+        <a href="" class="fab fa-vk"></a>
+        <a href="" class="fab fa-facebook-f"></a>
+        <a href="" class="fab fa-instagram"></a>
+        <a href="" class="fab fa-youtube"></a>
+        <a href="" class="fab fa-whatsapp"></a>
+        <a href="" class="fab fa-telegram"></a>
+    </div>
+
+    <div class="Store">
+
+        <button class="appleStore store--btn">
+            <section>
+                <i class="fab fa-apple"></i>
+                <p class="store--btn--download">Download on the</p>
+                <p class="store--btn--name">App Stope</p>
+            </section>
+        </button>
+
+        <button class="googlePlay store--btn">
+            <section>
+                <i class="fab fa-google-play"></i>
+                <p class="store--btn--download">GET IT ON</p>
+                <p class="store--btn--name">Google Play</p>
+            </section>
+        </button>
+    </div>
+
+    <div class="LogoFooter">
+        <img  src="./src/static/nav/Logo.svg" alt="">
+    </div>
+    
+    <div class="FooterNav">
+
+        <div class="footer--menu">
+            <p class="footer--name">Разделы</p>
+            <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Расписание</a></li>
+                <li><a href="">Игровые отчёты</a></li>
+                <li><a href="">Статистика</a></li>
+            </ul>
+        </div>
+
+        <div class="footer--sport">
+            <p class="footer--name">Виды спорта</p>
+            <ul>
+                <li><a href="">Футбол</a></li>
+                <li><a href="">Баскетбол</a></li>
+                <li><a href="">Волейбол</a></li>
+            </ul>
+        </div>
+
+        <div class="footer--about">
+            <p class="footer--name">Полезное</p>
+            <ul>
+                <li><a href="">Как записаться?</a></li>
+                <li><a href="">Ответы на вопросы</a></li>
+                <li><a href="">Достижения</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-others">
+            <p class="footer--name">Че почем</p>
+            <ul>
+                <li><a href="">Абонементы</a></li>
+                <li><a href="">Корп. клиентам</a></li>
+                <li><a href="">Партнёры</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="AllRights">
+        <p>© Все права защищены</p>
+        <p>Cделали в <a href="">Spans</a></p>
+    </div>
+</footer>
+
+<script src="./dist/main.js"></script>
+</html>

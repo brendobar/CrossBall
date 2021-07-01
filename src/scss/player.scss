@@ -1,0 +1,198 @@
+$backColor: #C4C4C4;
+$themeColor: #FF795B;
+
+$profileIconSize: 7vw;
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+.PLAYER{
+
+  color:white;
+  background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 5vw;
+  font-size: 4vw;
+
+  .Info{
+    grid-area: 1 / 1 / 2 / 4;
+    display: grid;
+    grid-template-columns: 3fr 4fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 5vw 0;
+    .ava{
+      width: 50%;
+      grid-area: 1 / 1 / 3 / 2;
+      .progress__image {
+        position: absolute;
+        width: 30vw;
+        padding: 1%;
+      }
+      .progress--bar{
+        &:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 30vw;
+          height: 30vw;
+          border-radius: 50%; 
+          background-color: $themeColor;
+        }
+      }
+    }
+    .ratio{
+      display: flex;
+      grid-area: 1 / 2 / 2 / 3;
+      &--second{
+          margin-left: 2vw;
+          margin-top: -2vw;
+          background-color: #5A60E7;
+          border-radius: 20px;
+          height: 5vw;
+          width: 15vw;
+          font-size: 3vw;
+          text-align: center;
+          padding: .5vw;
+          i{
+              color: #86E3CE;
+          }
+      }
+  }
+  .name{
+      grid-area: 2 / 2 / 3 / 3;
+      font-weight: 200;
+  }
+  }
+
+  .Edit{
+    grid-area: 2 / 1 / 3 / 3;
+    font-size: 4vw;
+    color: #ACAFF3;
+    position: relative;
+    button{
+      position: absolute;
+      bottom: 0;
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .Share{
+    grid-area: 2 / 3 / 3 / 4;
+    color: #ACAFF3;
+    font-size: 4vw;
+    position: relative;
+    margin-top: auto;
+    .social{
+      color:white;
+      display: flex;
+      justify-content: space-between;
+      font-size: 5vw;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px){
+    width: 25vw;
+    padding: 1vw;
+    margin: 0 2vw;
+    border-radius: 25px;
+
+    .Info{
+      position: relative;
+      width: max-content;
+      grid-template-columns: 70% 100%;
+      grid-template-rows: 30% 20%;
+      margin: 2vw 0;
+      grid-template-columns: unset;
+
+      .ava{
+        width: 8vw;
+        height: 100%;
+        .progress--bar {
+          position: relative;
+          width: 100%;
+          &:before {
+            width: $profileIconSize;
+            height: $profileIconSize;
+          }
+        }
+        .progress__image {
+          width: $profileIconSize;
+          padding: 2%;
+        }
+      }
+      .ratio{
+        font-size: 2vw;
+        padding-left: 10%;
+        &--second{
+          display: flex;
+          font-size: 1vw;
+          height: 60%;
+          width: 30%;
+          margin-top: -0.5vw;
+          margin-left: 0vw;
+          padding: 1% 5%;
+        }
+      }
+      .name{
+        font-size: 1.5vw;
+        padding-left: 10%;
+      } 
+    }
+    .Edit{
+      font-size: 1vw;
+      margin-top: 2vw;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+$step: 1;
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+@for $i from 0 through $loops {
+
+  .progress--bar.progress--#{$i * $step}:before {
+    @if $i < $half {
+      $nextDeg: 90deg + ($increment * $i);
+      background-image: linear-gradient(90deg, $backColor 50%, transparent 50%, transparent), linear-gradient($nextDeg, $themeColor 50%, $backColor 50%, $backColor);
+    }
+    @else {
+      $nextDeg: -90deg + ($increment * ($i - $half));
+      background-image: linear-gradient($nextDeg, $themeColor 50%, transparent 50%, transparent), linear-gradient(270deg, $themeColor 50%, $backColor 50%, $backColor);
+    }
+  }
+}

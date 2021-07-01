@@ -1,0 +1,231 @@
+
+
+
+.STATS{
+    background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+    padding: 5vw;
+    .ToggleSeason{
+        
+        .toggle--options{
+            border: 1px solid #5A60E7;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            color:#ACAFF3;
+            padding: .5vw;
+            font-size: 4vw;
+            &--btn{
+                padding: 0 5%;
+                transition: all 0.3s ease;
+                &--active{
+                    background-color: #5A60E7;
+                    width: 50%;
+                    border-radius: 7px;
+                    color:white;
+                }
+            }
+        }
+        
+    }
+
+    .PlayerStats{
+        display: flex;        
+        justify-content: space-between;
+        margin: 5vw 0;
+        & > div{
+            background: linear-gradient(238.37deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
+            border: 1px solid;
+            border-radius: 15px;
+            border-image: linear-gradient(143.66deg, #6171FF -9.12%, rgba(90, 96, 231, 0) 40.43%);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 7vw 7vw;
+            padding: 2vw;
+            color: white;
+            width: 20vw;
+            
+            p:nth-child(1){
+                grid-area: 1 / 1 / 1 / 3;
+                font-size: 3vw;
+            }
+            p:nth-child(2){
+                grid-area: 2 / 2 / 2 / 3;
+                color:#FF795B;
+                font-weight: 700;
+                font-size: 5vw;
+            }
+
+        }
+    }
+
+    .pattern{
+        display: none;
+    }
+    .Achieve{
+        p{
+            color: #909090;
+            font-size: 4vw;
+        }
+        .achieve--container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            & > div{
+                display: flex;
+                padding: 2vw 0;
+                section{
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: -10%;
+                        right: 0;
+                        background-color: white;
+                        border-radius: 15px;
+                        line-height: 2vw;
+                        padding: 1vw;
+                        font-size: 3vw;
+                        color:#5A60E7;
+                    }
+                }
+                img{
+                    padding: 0 1vw;
+                    width: 10vw;
+                }
+            }
+
+            .achieve--disable{
+                filter: grayscale(1);
+                justify-content: flex-end
+                
+            }
+            .achieve--one{
+                border-top: 1px solid white;
+                width: 90vw;
+                grid-area: 2 / 1 / 2 / 4;
+            }
+        }
+        
+        
+        
+    }
+    @media screen and (min-width: 1024px){
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 4fr 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 1vw;
+        border-radius: 20px;
+        grid-column-gap: 1vw;
+        .Achieve{
+            grid-area: 1 / 1 / 3 / 2;
+            width: 90%;
+            p{
+                display: none;
+            }
+            .achieve--container{
+                & > div{
+                    justify-content: space-evenly;
+                    padding: 1vw 0;
+                    width: 120%;
+                }
+                & > div img {
+                padding: 0;
+                width: 3vw;
+                }
+                & > div section span {
+                    position: absolute;
+                    top: -10%;
+                    right: -15%;
+                    background-color: white;
+                    border-radius: 15px;
+                    line-height: .5vw;
+                    padding: .5vw;
+                    font-size: 1vw;
+                    color: #5A60E7;
+                }
+                .achieve--multi{
+                    section{
+                        width: 3vw;
+                        img{
+                        }
+                    }
+                }
+                .achieve--one{
+                    width: 100%;
+                }
+                .achieve--disable{
+                    width: 100%;
+                }
+            }
+            
+            
+        }
+        .ToggleSeason{
+            grid-area: 1 / 2 / 2 / 3;
+            grid-column-gap: 1vw;
+            margin: auto 0;
+            button{
+            }
+            .toggle--options{
+                display: flex;
+                font-size: 1.5vw;
+                justify-content: space-between;
+                padding: 1%;
+                &--btn{
+                    padding: 0;
+                }
+            }
+        }
+        .PlayerStats{
+            grid-area: 2 / 2 / 3 / 3;
+            margin: 0;
+            & > div{
+                grid-template-rows: 45% 20%;
+                padding: .5vw;
+                color: white;
+                height: 70%;
+                width: 23%;
+                margin-top: -1vw;
+                .stat--name{
+                    font-size: 1vw !important;
+                }
+                .stat--value{
+                    font-size: 2vw !important;
+                    font-weight: 500 !important;
+                }
+            }
+        }
+        .StatShare{
+            grid-area: 1 / 3 / 2 / 4;
+            color: #ACAFF3;
+            padding: 0 1vw;
+            z-index: 2;
+            p{
+                font-size: 1vw;
+            }
+            .social{
+              color:white;
+              display: flex;
+              font-size: 1.5vw;
+              margin-top: 1vw;
+              a{
+                  margin-right: 1.5vw;
+              }
+            }
+            
+        }
+        .pattern{
+            display: block;
+            position: relative;
+            z-index: 1;
+            img{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+
+    }
+    
+}

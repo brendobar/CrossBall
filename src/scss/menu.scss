@@ -1,0 +1,84 @@
+
+
+
+.MENU{
+    overflow-x: scroll;
+    width: 100vw;
+    padding: 5vw;
+    background-color: #FAF9F9;
+    .Scroll{
+        display: flex;
+
+        
+        .exit{
+            display: none;
+        }
+
+        .scroll--btn{
+            button{
+            width: 60vw;
+            display: flex;
+            background-color: white;
+            margin: 0 2vw;
+            padding: 2vw 0;
+            border: 0;
+            border-radius: 10px;
+            
+            i {
+                color: #ACAFF3;
+                margin: auto 0;
+            }
+            *{
+                padding: 0 2vw;
+            }
+        }
+        }
+        
+    }
+
+    @media screen and (min-width: 1024px){
+        width: 25vw;
+        margin: 0 2vw;
+        padding: 0;
+        background-color: white;
+        box-shadow: -1px 1px 20px 0px #00000040;
+        border-radius: 20px;
+        overflow: hidden;
+        .Scroll{
+            display: block;
+            padding: 2vw;
+
+            .exit{
+                display: block;
+                margin-top: 5vw;
+                margin-bottom: 15vw;
+            }
+
+            .scroll--btn, .dropdown--btn{
+                font-size: 1vw;
+                width: 100%;
+                button{
+                    margin: 0;
+                }
+            }
+            .scroll--btn{
+                button{
+                    width: 100%;
+                    padding: 1vw 0;
+                }
+                
+            }
+            .dropdown{
+                .btn-color-change{
+                    background-color: #EFEFFD !important;
+                    color: #5A60E7;
+                }
+                .dropdown--content {
+                    // margin: 0;
+                    box-shadow: unset;
+                    background-color: unset;
+                }
+            }
+        }
+    }
+}

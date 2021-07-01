@@ -1,0 +1,102 @@
+
+
+.DROPDOWN{
+    background-color: #FAF9F9;
+    .dropdown{
+        padding: 5vw;
+        button{
+            width: 60vw;
+            display: flex;
+            background-color: white;
+            padding: 2vw;
+            margin: 0 2vw;
+            border: 0;
+            border-radius: 10px;
+            position: relative;
+            i {
+                color: #ACAFF3;
+                position: absolute;
+            }
+            *{
+                padding: 0 2vw;
+            }     
+        }
+          
+    }
+
+    .SeasonTable{
+        overflow-x: scroll;
+        width: 94vw;
+        padding: 5vw;
+        table{
+            border-spacing: 0;
+            width: 160vw;
+            border-radius: 15px;
+            box-shadow: 0 0 10px 1px rgb(0 0 0 / 20%);
+            
+            
+            thead{
+                color:#909090;
+                background-color: #fff;
+                height: 10vw;
+                
+                tr{
+                    height: 2vw;
+                    th{
+                        font-weight: 200;
+                        text-align-last: left;
+                        
+                    }
+                    th::before{
+                        // content: '\f0dc';
+                    }
+                }
+            }
+            tbody{
+                border-top: 1px solid #D6D7F9;
+                tr{
+                    background-color: white;
+                    height: 15vw;
+                    &:nth-child(odd){
+                        background-color: #FAF9F9;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    @media screen and (min-width: 1024px){
+        .dropdown{
+            padding: 0;
+            &--btn {
+                font-size: 1.5vw;
+                width: 150% !important;
+                margin: 2vw 0 !important;
+                padding: 1vw !important;
+            }
+            button *{
+                padding: 0;
+            }
+        }
+        .SeasonTable{
+            padding: 2vw 0;
+            width: 100%;
+            overflow: hidden;
+            table{
+                width: 100%;
+                font-size: 1vw;
+                thead{
+                    height: 3vw;
+                }
+                tbody{
+                    tr{
+                        height: 4vw;
+                    }
+                }
+            }
+        }
+    }
+}
